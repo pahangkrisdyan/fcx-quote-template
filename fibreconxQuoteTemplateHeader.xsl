@@ -72,7 +72,7 @@
                             <fo:block/>
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="tableBorderTop">
-                            <fo:block text-align="right" font-size="16pt" font-weight="bold" font-family="Montserrat Light">
+                            <fo:block text-align="right" font-size="16pt" font-weight="bold" font-family="Montserrat">
                                 SERVICE ORDER
                                 <xsl:choose>
                                     <xsl:when test="BusinessInteraction/ID">
