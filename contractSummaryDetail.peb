@@ -1,0 +1,123 @@
+{% import "utility.peb" %}
+{% macro renderChargeGroupDetail(chargeGroup) %}
+    {% for chargeGroupItem in chargeGroup %}
+        {% if chargeGroupItem.name == "Monthly" or chargeGroupItem.name == "Upfront"%}
+            <tr>
+              <td class="w275" colspan="2">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="w275" width="275" valign="top" style="vertical-align:top">
+                Total {{chargeGroupItem.name}}
+              </td>
+              <td class="w275" width="275" align="right">
+                <!--[if mso]>
+                <table><tr><td width="150" align="right">
+                <![endif]-->
+                <div style="width: 60%; text-align: right;">{{chargeGroupItem.totalPrice}}</div>
+                <!--[if mso]>
+                </td></tr></table>
+                <![endif]-->
+              </td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% if businessInteraction.contractSummary is not null %}
+    <table class="characteristic-block" cellspacing="0" cellpadding="0" width="100%" align="left" style="border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+        <tr>
+            <td class="header-sm">
+                Price Summary
+            </td>
+        </tr>
+        {{renderChargeGroupDetail(businessInteraction.contractSummary.chargeGroups.chargeGroup)}}
+        <tr>
+          <td class="w275" colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="w275" width="275" valign="top" style="vertical-align:top">
+                Contract
+            </td>
+            <td class="w275" width="275"></td>
+         </tr>
+         <tr>
+            <td class="w275" width="275" valign="top" style="vertical-align:top">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contract Change
+            </td>
+            <td class="w275" width="275">
+                <!--[if mso]>
+                <table><tr><td width="150" align="right">
+                <![endif]-->
+                <div style="width: 60%; text-align: right;">{{businessInteraction.contractSummary.contractTerm.changeAction}}</div>
+                <!--[if mso]>
+                </td></tr></table>
+                <![endif]-->
+            </td>
+         </tr>
+         <tr>
+            <td class="w275" width="275" valign="top" style="vertical-align:top">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Term
+            </td>
+            <td class="w275" width="275">
+                <!--[if mso]>
+                <table><tr><td width="150" align="right">
+                <![endif]-->
+                <div style="width: 60%; text-align: right;">{{businessInteraction.contractSummary.contractTerm.description}}</div>
+                <!--[if mso]>
+                </td></tr></table>
+                <![endif]-->
+            </td>
+         </tr>
+         {% if businessInteraction.businessInteractionComprisedOf is not null %}
+         {% for customerOrderItem in businessInteraction.businessInteractionComprisedOf %}
+            {% for inventoryEntity in customerOrderItem.itemInvolvesInventoryEntities %}
+                <tr>
+                    <td class="w275" width="275" valign="top" style="vertical-align:top">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start Date
+                    </td>
+                    <td class="w275" width="275">
+                        <!--[if mso]>
+                        <table><tr><td width="150" align="right">
+                        <![endif]-->
+                        <div style="width: 60%; text-align: right;">{{inventoryEntity.contractSummary.contractStartDate}}<div>
+                        <!--[if mso]>
+                        </td></tr></table>
+                        <![endif]-->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w275" width="275" valign="top" style="vertical-align:top">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Date
+                    </td>
+                    <td class="w275" width="275">
+                        <!--[if mso]>
+                        <table><tr><td width="150" align="right">
+                        <![endif]-->
+                        <div style="max-width: 60%; text-align: right;">{{inventoryEntity.contractSummary.contractEndDate}}</div>
+                        <!--[if mso]>
+                        </td></tr></table>
+                        <![endif]-->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w275" colspan="2">&nbsp;</td>
+                </tr>
+            {% endfor %}
+         {% endfor %}
+         {% endif %}
+         <tr>
+            <td class="w275" width="275" valign="top" style="vertical-align:top">
+                Total Value
+            </td>
+            <td class="w275" width="275">
+                <!--[if mso]>
+                <table><tr><td width="150" align="right">
+                <![endif]-->
+                <div style="width: 60%; text-align: right;">{{businessInteraction.contractSummary.totalContractValue}}</div>
+                <!--[if mso]>
+                </td></tr></table>
+                <![endif]-->
+            </td>
+        </tr>
+    </table>
+{% endif %}

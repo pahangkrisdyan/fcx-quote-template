@@ -1,0 +1,19 @@
+{% if processedTypes.Amendment is not empty %}
+    {%- set displayType = processedTypes.Amendment[0] %}
+    {%- set displayTypePrefix = "Amended" %}
+{% endif %}
+{% if processedTypes.SubState is not empty %}
+    {%- set displayType = processedTypes.SubState[0] %}
+    {%- set displayTypePrefix = businessInteraction.interactionStatus.name %}
+{% endif %}
+{% if processedTypes.Status is not empty %}
+    {%- set displayType = processedTypes.Status[0] %}
+    {%- set displayTypePrefix = null %}
+{% endif %}
+{% set biType = businessInteraction.specifiedBy.name %}
+{% if businessInteraction["@type"] == "CustomerOrder" %}
+    {%- set biType = "Order" %}
+{% endif %}
+{{businessInteraction.id}}: {% if businessInteraction.orderType != null %}{{businessInteraction.orderType}} {% endif %}{{biType}}
+ - {% if displayTypePrefix != null %}{{displayTypePrefix}} - {% endif -%}
+{{displayType}} ({{businessInteraction.customerReference | raw}})
