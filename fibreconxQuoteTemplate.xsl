@@ -564,7 +564,7 @@
         <xsl:attribute name="padding">0.7mm</xsl:attribute>
     </xsl:attribute-set>
     <xsl:attribute-set name="logo">
-        <xsl:attribute name="src">Fibreconx_Logo_Primary.png</xsl:attribute>
+        <xsl:attribute name="src">./Fibreconx_Logo_Primary.png</xsl:attribute>
         <xsl:attribute name="content-height">scale-to-fit</xsl:attribute>
         <xsl:attribute name="width">50mm</xsl:attribute>
         <!-- <xsl:attribute name="height">1in</xsl:attribute> -->
