@@ -158,7 +158,7 @@
                         </fo:table>
 
                         <fo:table font-size="8pt" border-collapse="collapse">
-                            <fo:table-column column-width="54%"/>      <!-- TOTAL -->
+                            <fo:table-column column-width="54%"/>     <!-- TOTAL -->
                             <fo:table-column column-width="4%"/>      <!-- QTY -->
                             <fo:table-column column-width="4%"/>      <!-- - -->
                             <fo:table-column column-width="6%"/>      <!-- TOTAL Once-off -->
