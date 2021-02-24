@@ -248,7 +248,7 @@
                             </xsl:choose>
                         </fo:block>
                         <fo:block font-size="8pt" space-after="1cm">
-                            Please note: Your order notification contact can be updated at any time via the FibreconX Fusion Portal at <fo:basic-link internal-destination="https://fusion.fibreconx.com.au" color="blue">https://fusion.fibreconx.com.au</fo:basic-link>
+                            Please note: Your order notification contact can be updated at any time via the FibreconX Fusion Portal at <fo:basic-link text-decoration="underline" internal-destination="https://fusion.fibreconx.com.au" color="blue">https://fusion.fibreconx.com.au</fo:basic-link>
                             <!-- <fo:inline color="#3c76f2"></fo:inline>. -->
                         </fo:block>
                         <fo:block font-size="16pt" font-weight="bold" space-after="0.2cm">
@@ -264,7 +264,7 @@
                             &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;1300 064 405
                         </fo:block>
                         <fo:block font-size="8pt" space-after="0.6cm">
-                            Order progress updates are available on FibreconX Fusion Portal at <fo:basic-link internal-destination="https://fusion.fibreconx.com.au" color="blue">https://fusion.fibreconx.com.au</fo:basic-link>
+                            Order progress updates are available via email and on the FibreconX Fusion Portal at <fo:basic-link text-decoration="underline" internal-destination="https://fusion.fibreconx.com.au" color="blue">https://fusion.fibreconx.com.au</fo:basic-link>
                         </fo:block>
                         <fo:block font-size="8pt" space-after="0.2cm">
                             The FibreconX Fusion Portal is also the source for all other information for your FibreconX interactions:
@@ -285,7 +285,7 @@
                             &#160;&#160;&#160;&#160;- Raising &#38; managing service incidents
                         </fo:block>
                         <fo:block font-size="8pt" space-after="0.02cm">
-                            &#160;&#160;&#160;&#160;- Portal administration can also manage all portal user accounts
+                            &#160;&#160;&#160;&#160;- Portal user administration
                         </fo:block>
                     </fo:block>
                 </fo:flow>

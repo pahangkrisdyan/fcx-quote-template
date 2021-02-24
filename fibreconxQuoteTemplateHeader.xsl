@@ -18,7 +18,7 @@
                 </xsl:choose>
             </fo:block>
         </fo:block-container>
-        <fo:block font-size="7pt" space-before="0mm" space-after="0mm">
+        <fo:block font-size="8pt" space-before="0mm" space-after="0mm">
             <fo:table table-layout="fixed" width="100%" border-collapse="collapse" color="#000000">
                 <fo:table-column column-width="20%"/>
                 <fo:table-column column-width="60%"/>
