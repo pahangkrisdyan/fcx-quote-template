@@ -230,16 +230,18 @@
                         <fo:block font-size="8pt" space-after="0.2cm">
                             Order status updates will be provided to:
                         </fo:block>
-                        <fo:block font-size="8pt" space-after="0.04cm">
-                            <xsl:choose>
-                                <xsl:when test="BusinessInteraction/BusinessInteractionInvolves/PartyInteractionRole[InteractionRoleType='NotificationOwner']/PartyRole/Party/Name">
+                        <xsl:choose>
+                            <xsl:when test="BusinessInteraction/BusinessInteractionInvolves/PartyInteractionRole[InteractionRoleType='NotificationOwner']/PartyRole/Party/Name">
+                                <fo:block font-size="8pt" space-after="0.04cm">
                                     &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<xsl:value-of select="BusinessInteraction/BusinessInteractionInvolves/PartyInteractionRole[InteractionRoleType='NotificationOwner']/PartyRole/Party/Name"/>
-                                </xsl:when>
-                                <xsl:otherwise>
+                                </fo:block>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <fo:block font-size="8pt" font-style="italic" space-after="0.04cm">
                                     &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Order contact details not set.
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </fo:block>
+                                </fo:block>
+                            </xsl:otherwise>
+                        </xsl:choose>
                         <fo:block font-size="8pt" space-after="0.2cm">
                             <xsl:choose>
                                 <xsl:when test="BusinessInteraction/BusinessInteractionInvolves/PartyInteractionRole[InteractionRoleType='NotificationOwner']/PartyRole/ContactMediums/ContactMedium[Type='Contact']/EmailAddress">
