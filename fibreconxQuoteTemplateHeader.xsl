@@ -29,7 +29,7 @@
                             <fo:block font-weight="bold" font-size="20" color="#324c52">
                                 QUOTE
                             </fo:block>
-                            <fo:block font-size="12pt" font-weight="bold" text-align="left">
+                            <fo:block font-size="8pt" font-weight="bold" text-align="left">
                                 <fo:inline color="#737477">
                                     <xsl:choose>
                                         <xsl:when test="BusinessInteraction/ContractSummary/Version">
