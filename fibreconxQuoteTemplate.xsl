@@ -238,7 +238,7 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <fo:block font-size="8pt" font-style="italic" space-after="0.04cm">
-                                    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Order contact details not set.
+                                    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Order contact details not set.]
                                 </fo:block>
                             </xsl:otherwise>
                         </xsl:choose>
