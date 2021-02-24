@@ -210,7 +210,7 @@
                             </fo:table-body>
                         </fo:table>
                     </fo:block>
-                    <fo:block page-break-inside="avoid">
+                    <fo:block page-break-inside="avoid" style="transform:translateY(100)">
                         <fo:block font-size="16pt" font-weight="bold" space-after="0.2cm" space-before="1cm">
                             TERMS AND CONDITIONS
                         </fo:block>
