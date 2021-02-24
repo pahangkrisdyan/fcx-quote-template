@@ -33,7 +33,7 @@
                                 <fo:inline color="#737477">
                                     <xsl:choose>
                                         <xsl:when test="BusinessInteraction/ContractSummary/Version">
-                                            Version <xsl:value-of select="BusinessInteraction/ContractSummary/Version"/>
+                                            VersionY <xsl:value-of select="BusinessInteraction/ContractSummary/Version"/>
                                         </xsl:when>
                                         <xsl:otherwise>
                                             –
