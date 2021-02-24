@@ -46,7 +46,7 @@
                             <fo:block font-size="8pt" text-align="center"><fo:inline color="#000000">FibreconX Pty Ltd (ABN) 82 637 460 425</fo:inline></fo:block>
                         </fo:table-cell>
                         <fo:table-cell xsl:use-attribute-sets="tableBorderTop">
-                            <fo:block font-size="14pt" font-weight="bold" text-align="right">
+                            <fo:block>
                                 <fo:external-graphic xsl:use-attribute-sets="logo"></fo:external-graphic>
                             </fo:block>
                         </fo:table-cell>
